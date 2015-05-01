@@ -16,7 +16,7 @@
     "nodemon":"*"
   },
   "devDependencies": {},
-  "subdomain": "iccknet-EventosCaracol",
+  "subdomain": "library.musicacademy.org",
   "engines": {
     "node": "0.10.x"
   }
