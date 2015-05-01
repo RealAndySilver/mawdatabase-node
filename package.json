@@ -12,7 +12,8 @@
     "mongoose": "3.6.14",
     "nodemailer": "*",
     "node-gcm": "*",
-    "connect-mongo":"*"
+    "connect-mongo":"*",
+    "nodemon":"*"
   },
   "devDependencies": {},
   "subdomain": "iccknet-EventosCaracol",
