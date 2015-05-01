@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+	head
+		title (MAW) #{title}
+		script(src="../../../../../../../../javascripts/jquery.js")
+		script(src="../../../../../../../../javascripts/bootstrap.js")
+		script(src="../../../../../../../../javascripts/ajax_req.js")
+		-var dots="../../../../../../../../";
+		link(rel="stylesheet",href="#{dots}stylesheets/bootstrap.css")
+		//link(rel="stylesheet",href="#{dots}stylesheets/bootstrapSlate.min.css")
+		//link(rel="stylesheet",href="#{dots}stylesheets/bootstrapSimplex.min.css")
+		//link(rel="stylesheet",href="#{dots}stylesheets/bootstrapSuperhero.min.css")
+		//link(rel="stylesheet",href="#{dots}stylesheets/bootstrapYeti.min.css")
+		//link(rel="stylesheet",href="#{dots}stylesheets/bootstrapLumen.min.css")
+		//link(rel="stylesheet",href="#{dots}stylesheets/bootstrapJournal.min.css")
+		//link(rel="stylesheet",href="#{dots}stylesheets/bootstrapFlatly.min.css")
+
+	nav(class="navbar navbar", role="navigation", style="background: rgba(200,200,200,0.2); height:70px;")
+		div(class="container-fluid")
+			.container
+				div(style="width: 500px;", style="display:inline-block")
+					img(src="../../../images/maw-logo.png", height="50px", style="margin-top:10px;")
+				//h1(class="navbar-header", style="color:white;") Welcome to the MAW Search Tool
+				-if(session)
+					ul(class="nav navbar-nav navbar-right", style="margin-right:0 !important; display:inline-block;")
+						li(class="dropdown")
+							a(href="#", class="dropdown-toggle", data-toggle="dropdown") #{email} 
+								b(class="caret")
+							ul(class="dropdown-menu")
+								li
+									a(href="/") Home
+								li
+									a(href="/Dashboard/NewScore") New Score
+								li
+									a(href="/Dashboard/NewRecording") New Recording
+								li
+									a(href="/Logout") Logout
+								
+				-else
+					ul(class="nav navbar-nav navbar-right", style="margin-right:0 !important; display:inline-block;")
+						li
+							a(href="/Dashboard/Login") Admin Login
+				

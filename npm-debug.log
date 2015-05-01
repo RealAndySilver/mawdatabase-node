@@ -1,0 +1,93 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g' ]
+2 info using npm@2.0.0
+3 info using node@v0.10.12
+4 verbose cache add [ '.', null ]
+5 verbose cache add spec="." args=[".",null]
+6 verbose parsed spec { raw: '.',
+6 verbose parsed spec   scope: null,
+6 verbose parsed spec   name: null,
+6 verbose parsed spec   rawSpec: '.',
+6 verbose parsed spec   spec: '/Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp',
+6 verbose parsed spec   type: 'local' }
+7 verbose cache add local package /Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp
+8 silly lockFile fc51b635-ox-Proyectos-Clientes-MAW-mawapp /Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp
+9 verbose lock /Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp /Users/andresabril/.npm/fc51b635-ox-Proyectos-Clientes-MAW-mawapp.lock
+10 verbose tar pack [ '/Users/andresabril/.npm/mawapp/0.0.1-35/package.tgz',
+10 verbose tar pack   '/Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp' ]
+11 verbose tarball /Users/andresabril/.npm/mawapp/0.0.1-35/package.tgz
+12 verbose folder /Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp
+13 info prepublish mawapp@0.0.1-35
+14 silly lockFile 1443d878-ox-Proyectos-Clientes-MAW-mawapp tar:///Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp
+15 verbose lock tar:///Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp /Users/andresabril/.npm/1443d878-ox-Proyectos-Clientes-MAW-mawapp.lock
+16 silly lockFile bc38ac15--npm-mawapp-0-0-1-35-package-tgz tar:///Users/andresabril/.npm/mawapp/0.0.1-35/package.tgz
+17 verbose lock tar:///Users/andresabril/.npm/mawapp/0.0.1-35/package.tgz /Users/andresabril/.npm/bc38ac15--npm-mawapp-0-0-1-35-package-tgz.lock
+18 silly lockFile 1443d878-ox-Proyectos-Clientes-MAW-mawapp tar:///Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp
+19 silly lockFile 1443d878-ox-Proyectos-Clientes-MAW-mawapp tar:///Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp
+20 silly lockFile bc38ac15--npm-mawapp-0-0-1-35-package-tgz tar:///Users/andresabril/.npm/mawapp/0.0.1-35/package.tgz
+21 silly lockFile bc38ac15--npm-mawapp-0-0-1-35-package-tgz tar:///Users/andresabril/.npm/mawapp/0.0.1-35/package.tgz
+22 silly lockFile 3768a856-bril-npm-mawapp-0-0-1-35-package /Users/andresabril/.npm/mawapp/0.0.1-35/package
+23 verbose lock /Users/andresabril/.npm/mawapp/0.0.1-35/package /Users/andresabril/.npm/3768a856-bril-npm-mawapp-0-0-1-35-package.lock
+24 silly lockFile 3768a856-bril-npm-mawapp-0-0-1-35-package /Users/andresabril/.npm/mawapp/0.0.1-35/package
+25 silly lockFile 3768a856-bril-npm-mawapp-0-0-1-35-package /Users/andresabril/.npm/mawapp/0.0.1-35/package
+26 silly lockFile fc51b635-ox-Proyectos-Clientes-MAW-mawapp /Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp
+27 silly lockFile fc51b635-ox-Proyectos-Clientes-MAW-mawapp /Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp
+28 silly resolved [ { name: 'mawapp',
+28 silly resolved     version: '0.0.1-35',
+28 silly resolved     private: true,
+28 silly resolved     scripts: { start: 'nodemon app.js' },
+28 silly resolved     dependencies:
+28 silly resolved      { express: '3.3.3',
+28 silly resolved        jade: '*',
+28 silly resolved        'less-middleware': '*',
+28 silly resolved        mongoose: '3.6.14',
+28 silly resolved        nodemailer: '*',
+28 silly resolved        'node-gcm': '*',
+28 silly resolved        'connect-mongo': '*' },
+28 silly resolved     devDependencies: {},
+28 silly resolved     subdomain: 'iccknet-EventosCaracol',
+28 silly resolved     engines: { node: '0.10.x' },
+28 silly resolved     readme: 'ERROR: No README data found!',
+28 silly resolved     _id: 'mawapp@0.0.1-35',
+28 silly resolved     _shasum: '283548a4918def71ee4f28749b05c16a9f00fa88',
+28 silly resolved     _from: '../../Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp' } ]
+29 info install mawapp@0.0.1-35 into /usr/local/lib
+30 info installOne mawapp@0.0.1-35
+31 verbose lib/node_modules/mawapp unbuild
+32 verbose gentlyRm vacuuming /usr/local/lib/node_modules/mawapp
+33 verbose tar unpack /Users/andresabril/.npm/mawapp/0.0.1-35/package.tgz
+34 silly lockFile 5224d1a6-sr-local-lib-node-modules-mawapp tar:///usr/local/lib/node_modules/mawapp
+35 verbose lock tar:///usr/local/lib/node_modules/mawapp /Users/andresabril/.npm/5224d1a6-sr-local-lib-node-modules-mawapp.lock
+36 silly lockFile bc38ac15--npm-mawapp-0-0-1-35-package-tgz tar:///Users/andresabril/.npm/mawapp/0.0.1-35/package.tgz
+37 verbose lock tar:///Users/andresabril/.npm/mawapp/0.0.1-35/package.tgz /Users/andresabril/.npm/bc38ac15--npm-mawapp-0-0-1-35-package-tgz.lock
+38 verbose gentlyRm vacuuming /usr/local/lib/node_modules/mawapp
+39 silly gunzTarPerm modes [ '755', '644' ]
+40 verbose fstream_path /usr/local/lib/node_modules/mawapp
+41 verbose fstream_type Directory
+42 verbose fstream_class DirWriter
+43 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/mawapp'
+44 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+44 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+44 verbose fstream_stack Object.oncomplete (fs.js:107:15)
+45 verbose cwd /Users/andresabril/Dropbox/Proyectos/Clientes/MAW/mawapp
+46 error Darwin 14.1.0
+47 error argv "node" "/usr/local/bin/npm" "install" "-g"
+48 error node v0.10.12
+49 error npm  v2.0.0
+50 error path /usr/local/lib/node_modules/mawapp
+51 error code EACCES
+52 error errno 3
+53 error Error: EACCES, mkdir '/usr/local/lib/node_modules/mawapp'
+53 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/mawapp']
+53 error   errno: 3,
+53 error   code: 'EACCES',
+53 error   path: '/usr/local/lib/node_modules/mawapp',
+53 error   fstream_type: 'Directory',
+53 error   fstream_path: '/usr/local/lib/node_modules/mawapp',
+53 error   fstream_class: 'DirWriter',
+53 error   fstream_stack:
+53 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+53 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+53 error      'Object.oncomplete (fs.js:107:15)' ] }
+54 error Please try running this command again as root/Administrator.
+55 verbose exit [ 3, true ]

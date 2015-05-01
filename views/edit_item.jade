@@ -1,0 +1,99 @@
+include head
+.container
+	.jumbotron
+		.container
+			-if(session)
+				-if(type=="score")
+					h2 Edit: #{score.title} 
+				-else if(type=="recording")
+					h2 Edit: #{recording.title}
+			-else
+				h2 You don't have permission to edit this info.
+			div(class="col-md-7 col-md-offset-0",style="display:inline-block;")
+				div(id="update_form")
+					-if(type=="score")
+						form(method='post',action='/DeleteScore', name="form",enctype="multipart/form-data",onsubmit="return confirm('Are you sure you want to delete #{score.title}?');")
+							input(type="hidden", name="score_id", value="#{score._id}")
+							button(type="submit",class="btn btn-danger pull-right", style="float:right; margin-left:10px;", name='submit') Delete
+						form(method='POST', action='/UpdateScore', name="fo")
+							
+							legend Category
+							p
+							-if(session)
+								select(name="category", class="form-control")
+									option(value='0') None
+									each category, index in categories
+										-if(category.name == score.category)
+											option(value='#{category.name}', selected="selected") #{category.name}
+										-else
+											option(value='#{category.name}') #{category.name}
+								p
+							-else
+								select(name="category", class="form-control", disabled)
+									option(value='0') #{score.category}
+								p
+	
+							legend
+							div(class="input-group")
+								span(class="input-group-addon") Composer
+								-if(session)
+									input(type="text",class="form-control", placeholder="name", name="composer", value="#{score.composer}")
+								-else
+									input(type="text",class="form-control", placeholder="name", name="composer", value="#{score.composer}", disabled) 
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Title
+								-if(session)
+									input(type="text",class="form-control", placeholder="score title", name="title", value="#{score.title}")
+								-else
+									input(type="text",class="form-control", placeholder="score title", name="title", value="#{score.title}", disabled)
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Edition
+								-if(session)
+									input(type="text",class="form-control", placeholder="edition", name="edition", value="#{score.edition}")
+								-else
+									input(type="text",class="form-control", placeholder="edition", name="edition", value="#{score.edition}", disabled)
+							p
+							input(type="hidden",class="form-control", placeholder="", name="score_id", value="#{score._id}")
+							-if(session)
+								button(type="submit",class="btn btn-warning pull-right") Update	
+							button(class="btn btn-default pull-right", type="button", onclick="window.location.replace('/')", style="margin-right:10px;") Cancel
+					-else if(type=="recording")
+						form(method='post',action='/DeleteRecording', name="form",enctype="multipart/form-data",onsubmit="return confirm('Are you sure you want to delete #{recording.title}?');")
+							input(type="hidden", name="recording_id", value="#{recording._id}")
+							button(type="submit",class="btn btn-danger pull-right", style="float:right; margin-left:10px;", name='submit') Delete
+						form(method='POST', action='/UpdateRecording', name="fo")
+
+							div(class="input-group")
+								span(class="input-group-addon") CD Number
+								-if(session)
+									input(type="text",class="form-control", placeholder="cd number", name="cd_number", value="#{recording.cd_number}")
+								-else
+									input(type="text",class="form-control", placeholder="cd number", name="cd_number", value="#{recording.cd_number}", disabled) 
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Composer
+								-if(session)
+									input(type="text",class="form-control", placeholder="name", name="composer", value="#{recording.composer}")
+								-else
+									input(type="text",class="form-control", placeholder="name", name="composer", value="#{recording.composer}", disabled) 
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Title
+								-if(session)
+									input(type="text",class="form-control", placeholder="score title", name="title", value="#{recording.title}")
+								-else
+									input(type="text",class="form-control", placeholder="score title", name="title", value="#{recording.title}", disabled)
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Artist
+								-if(session)
+									input(type="text",class="form-control", placeholder="artist", name="artist", value="#{recording.artist}")
+								-else
+									input(type="text",class="form-control", placeholder="artist", name="artist", value="#{recording.artist}", disabled)
+							p
+							input(type="hidden",class="form-control", placeholder="artist", name="recording_id", value="#{recording._id}")
+							-if(session)
+								button(type="submit",class="btn btn-warning pull-right") Update	
+							button(class="btn btn-default pull-right", type="button", onclick="window.location.replace('/')", style="margin-right:10px;") Cancel

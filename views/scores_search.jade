@@ -1,0 +1,52 @@
+include head
+.container
+	.jumbotron
+		.container
+			h2 #{title} 
+			a(type="submit",class="btn btn-warning pull-left", style="width:150px; margin-right:20px;",  href="/Dashboard/Scores") Scores
+			a(type="submit",class="btn btn-default pull-left", style="width:150px; margin-right:20px;",  href="/Dashboard/Recordings") Recordings
+			if(session)
+				a(type="submit",class="btn btn-default pull-right",  href="/Dashboard/NewScore") New Score
+					span(style="font-weight:bolder;")  +
+				a(type="submit",class="btn btn-default pull-right",  href="/Dashboard/NewRecording", style="margin-right:20px;") New Recording
+					span(style="font-weight:bolder;")  +
+	
+	.jumbotron
+		.container
+			div(class="col-md-3 col-md-offset-0",style="display:inline-block;")
+				div(id="main_form")
+					form(method='POST', action='/SearchScores', name="fo")
+						
+						legend Category
+						p
+						select(name="category", class="form-control")
+							option(value='0') None
+							each category, index in categories
+								option(value='#{category.name}') #{category.name}
+									
+						p
+						legend Parameters
+						p
+						div(class="input-group")
+							span(class="input-group-addon") Composer
+							input(type="text",class="form-control", placeholder="name", name="composer")
+						p
+						div(class="input-group")
+							span(class="input-group-addon") Title
+							input(type="text",class="form-control", placeholder="score title", name="title")
+						p
+						-if(session)
+							div(class="input-group")
+								span(class="input-group-addon") ID Number
+								input(type="text",class="form-control", placeholder="id number", name="lib_id")
+							p
+						-else
+							input(type="hidden",class="form-control", placeholder="id number", name="lib_id")
+						//div(class="input-group")
+						button(type="submit",class="btn btn-success pull-right") Search
+			
+			div(style="width:700px;display:inline-block; margin-left:20px;")
+				legend(id="results_label") Results will be shown below
+				span(id="loading")	
+				span(id="results_table")	
+							

@@ -1,0 +1,12 @@
+include head
+.container
+	.jumbotron
+		.container
+			h2 Choose a Database to search 
+			a(type="submit",class="btn btn-warning pull-left", style="width:150px; margin-right:20px;",  href="/Dashboard/Scores") Scores
+			a(type="submit",class="btn btn-danger pull-left", style="width:150px; margin-right:20px;",  href="/Dashboard/Recordings") Recordings
+			if(session)
+				a(type="submit",class="btn btn-default pull-right",  href="/Dashboard/NewScore") New Score
+					span(style="font-weight:bolder;")  +
+				a(type="submit",class="btn btn-default pull-right",  href="/Dashboard/NewRecording", style="margin-right:20px;") New Recording
+					span(style="font-weight:bolder;")  +		

@@ -1,0 +1,83 @@
+include head
+.container
+	.jumbotron
+		.container
+			-if(session)
+				-if(type=="score")
+					h2 New Score
+				-else if(type=="recording")
+					h2 New Recording
+			
+				div(class="col-md-7 col-md-offset-0",style="display:inline-block;")
+				div(id="create_form")
+					-if(type=="score")
+						form(method='POST', action='/CreateScore', name="fo")
+							div(class="input-group")
+								span(class="input-group-addon") ID
+								input(type="text",class="form-control", placeholder="id number", name="lib_id", value="#{id}", readonly)
+							p
+							legend Category
+							p
+							select(name="category", class="form-control")
+								option(value='0') None
+								each category, index in categories
+									option(value='#{category.name}') #{category.name}
+							p
+							legend
+							div(class="input-group")
+								span(class="input-group-addon") Composer
+								input(type="text",class="form-control", placeholder="name", name="composer")
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Title
+								input(type="text",class="form-control", placeholder="score title", name="title")
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Edition
+								input(type="text",class="form-control", placeholder="edition", name="edition")
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Missing Parts
+								input(type="text",class="form-control", placeholder="missing parts", name="missing_parts")
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Condition
+								input(type="text",class="form-control", placeholder="condition", name="condition")
+							p
+							button(type="submit",class="btn btn-warning pull-right") Create	
+							button(class="btn btn-danger pull-right", type="button", onclick="window.location.replace('/')", style="margin-right:10px;") Cancel
+					-else if(type=="recording")
+						form(method='POST', action='/CreateRecording', name="fo")
+							div(class="input-group")
+								span(class="input-group-addon") Recording ID
+								input(type="text",class="form-control", placeholder="recording id", name="rec_id", value="#{id}", readonly)
+							p
+							div(class="input-group")
+								span(class="input-group-addon") CD Number
+								input(type="text",class="form-control", placeholder="cd number", name="cd_number")
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Composer
+								input(type="text",class="form-control", placeholder="composer name", name="composer")
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Title
+								input(type="text",class="form-control", placeholder="recording title", name="title")
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Artist
+								input(type="text",class="form-control", placeholder="artist", name="artist")
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Instrumentation
+								input(type="text",class="form-control", placeholder="instrumentation", name="instrumentation")
+							p
+							div(class="input-group")
+								span(class="input-group-addon") Material Type
+								input(type="text",class="form-control", placeholder="material type", name="material_type")
+							p
+							button(type="submit",class="btn btn-warning pull-right") Create	
+							button(class="btn btn-danger pull-right", type="button", onclick="window.location.replace('/')", style="margin-right:10px;") Cancel
+			-else
+				h2 You don't have permission to create items.
+			
